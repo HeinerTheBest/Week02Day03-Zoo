@@ -13,7 +13,7 @@
             android:label="Description">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mobileapps.week02day03zoo.Activities.CategoriesActivity" />
+                android:value="com.mobileapps.week02day03zoo.Activities.AnimalsListActivity" />
         </activity>
         <activity android:name=".Activities.AnimalsListActivity"
             android:label="Animals List">

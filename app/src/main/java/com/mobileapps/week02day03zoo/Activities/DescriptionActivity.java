@@ -51,8 +51,10 @@ public class DescriptionActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        player.pause();
+    protected void onPause() {
+        super.onPause();
+        if(player != null)
+         player.pause();
     }
+
 }

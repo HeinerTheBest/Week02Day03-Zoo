@@ -1,6 +1,7 @@
 package com.mobileapps.week02day03zoo.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Parcelable;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
@@ -21,14 +22,17 @@ public class AnimalsListActivity extends AppCompatActivity {
 
     ArrayList<Animal> animals;
     RecyclerView recyclerView;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animals);
 
-        Intent intent = getIntent();
-        String category = intent.getStringExtra("category");
+        sharedPreferences = getSharedPreferences("shared_pref",MODE_PRIVATE);
+
+        String category = sharedPreferences.getString("category","");
+
         animals = new DummyAnimalsDataBaseHelper().getAllAnimal();
         animals = new DummyAnimalsDataBaseHelper().filterBy(category,animals);
         recyclerView = findViewById(R.id.rvAnimals);

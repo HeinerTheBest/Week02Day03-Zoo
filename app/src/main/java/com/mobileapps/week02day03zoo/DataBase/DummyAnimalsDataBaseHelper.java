@@ -72,9 +72,26 @@ public class DummyAnimalsDataBaseHelper
         return animals;
     }
 
+    public String[] getAllCategories()
+    {
+        String[] values = new String[]
+                {
+                        "Mammals",
+                        "Birds",
+                        "Fish",
+                        "Reptiles",
+                        "Amphibians"
+                };
+
+        return values;
+    }
+
     public ArrayList<Animal> filterBy(String category,ArrayList<Animal> animals)
     {
         ArrayList<Animal> aux = new ArrayList<>();
+
+        if(category.equals("") || category.equals("All"))
+            return animals;
 
         for(Animal animal:animals)
         {
