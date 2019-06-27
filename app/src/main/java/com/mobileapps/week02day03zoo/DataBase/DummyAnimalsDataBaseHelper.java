@@ -53,6 +53,22 @@ public class DummyAnimalsDataBaseHelper
                 "\n" +
                 "The largest living species is the emperor penguin (Aptenodytes forsteri):[1] on average, adults are about 1.1 m (3 ft 7 in) tall and weigh 35 kg (77 lb). The smallest penguin species is the little blue penguin (Eudyptula minor), also known as the fairy penguin, which stands around 40 cm (16 in) tall and weighs 1 kg (2.2 lb). Among extant penguins, larger penguins inhabit colder regions, while smaller penguins are generally found in temperate or even tropical climates (see also Bergmann's rule). Some prehistoric species attained enormous sizes, becoming as tall or as heavy as an adult human. These were not restricted to Antarctic regions; on the contrary, subantarctic regions harboured high diversity, and at least one giant penguin occurred in a region around 2,000 km south of the equator 35 mya, in a climate decidedly warmer than today"));
 
+
+
+        animals.add(new Animal("Eagle","Birds","eagle","eagle","is the common name for many large birds of prey of the family Accipitridae. Eagles belong to several groups of genera, not all of which are closely related. Most of the 60 species of eagle are from Eurasia and Africa.[1] Outside this area, just 14 species can be found—2 in North America, 9 in Central and South America, and 3 in Australia."));
+
+        animals.add(new Animal("Falcon","Birds","falcon","falcon","Falcons (/ˈfɒlkən, ˈfɔːl-, ˈfæl-/) are birds of prey in the genus Falco, which includes about 40 species. Falcons are widely distributed on all continents of the world except Antarctica, though closely related raptors did occur there in the Eocene.[1]\n" +
+                "\n" +
+                "Adult falcons have thin, tapered wings, which enable them to fly at high speed and change direction rapidly. Fledgling falcons, in their first year of flying, have longer flight feathers, which make their configuration more like that of a general-purpose bird such as a broad-wing. This makes flying easier while learning the exceptional skills required to be effective hunters as adults. There are many different types of falcon.\n" +
+                "\n" +
+                "The falcons are the largest genus in the Falconinae subfamily of Falconidae, which itself also includes another subfamily comprising caracaras and a few other species. All these birds kill with their beaks, using a \"tooth\" on the side of their beaks—unlike the hawks, eagles, and other birds of prey in the Accipitridae, which use their feet.\n" +
+                "\n" +
+                "The largest falcon is the gyrfalcon at up to 65 cm in length. The smallest falcons are the kestrels, of which the Seychelles kestrel measures just 25 cm. As with hawks and owls, falcons exhibit sexual dimorphism, with the females typically larger than the males, thus allowing a wider range of prey species.[2]\n" +
+                "\n" +
+                "Some small falcons with long, narrow wings are called \"hobbies\"[3] and some which hover while hunting are called \"kestrels\".[3][4]\n" +
+                "\n" +
+                "As is the case with many birds of prey, falcons have exceptional powers of vision; the visual acuity of one species has been measured at 2.6 times that of a normal human.[5] Peregrine falcons have been recorded diving at speeds of 200 miles per hour (320 km/h), making them the fastest-moving creatures on Earth. The fastest recorded dive for one is 390 km/h.[6]"));
+
         return animals;
     }
 
