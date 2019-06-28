@@ -12,6 +12,7 @@ import android.util.Log;
 
 import com.mobileapps.week02day03zoo.Adapters.AnimalAdapter;
 import com.mobileapps.week02day03zoo.DataBase.DummyAnimalsDataBaseHelper;
+import com.mobileapps.week02day03zoo.DataBase.ZooDataBaseHelper;
 import com.mobileapps.week02day03zoo.Models.Animal;
 import com.mobileapps.week02day03zoo.R;
 
@@ -33,8 +34,10 @@ public class AnimalsListActivity extends AppCompatActivity {
 
         String category = sharedPreferences.getString("category","");
 
-        animals = new DummyAnimalsDataBaseHelper().getAllAnimal();
-        animals = new DummyAnimalsDataBaseHelper().filterBy(category,animals);
+
+        ZooDataBaseHelper zooDataBaseHelper = new ZooDataBaseHelper(this);
+        animals = zooDataBaseHelper.getAnimalsByCategory(category);
+
         recyclerView = findViewById(R.id.rvAnimals);
         AnimalAdapter animalAdapter = new AnimalAdapter(animals,this);
         recyclerView.setAdapter(animalAdapter);
