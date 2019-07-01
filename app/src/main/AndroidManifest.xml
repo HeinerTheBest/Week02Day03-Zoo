@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobileapps.week02day03zoo">
+    <uses-permission android:name="key.to.gate.of.the.zoo"/>
+    <permission
+        android:name="key.to.gate.of.the.zoo"
+        android:protectionLevel="normal"
+        />
 
     <application
         android:allowBackup="true"
@@ -35,6 +40,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="com.mobileapps.week02day03zoo.Providers"
+            android:name=".Providers.ZooAnimalCOntentProvider"
+            android:permission="key.to.gate.of.zoo"
+            />
     </application>
 
 </manifest>
