@@ -13,6 +13,7 @@ import android.util.Log;
 import com.mobileapps.week02day03zoo.Adapters.AnimalAdapter;
 import com.mobileapps.week02day03zoo.DataBase.DummyAnimalsDataBaseHelper;
 import com.mobileapps.week02day03zoo.DataBase.ZooDataBaseHelper;
+import com.mobileapps.week02day03zoo.FileStorage.InternalFileStorage;
 import com.mobileapps.week02day03zoo.Models.Animal;
 import com.mobileapps.week02day03zoo.R;
 
@@ -24,6 +25,7 @@ public class AnimalsListActivity extends AppCompatActivity {
     ArrayList<Animal> animals;
     RecyclerView recyclerView;
     SharedPreferences sharedPreferences;
+    private String TAG = AnimalsListActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,19 @@ public class AnimalsListActivity extends AppCompatActivity {
         AnimalAdapter animalAdapter = new AnimalAdapter(animals,this);
         recyclerView.setAdapter(animalAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        printFileToLogCat();
+    }
+
+    private void printFileToLogCat()
+    {
+        try {
+            InternalFileStorage internalFileStorage = new InternalFileStorage("fav_animals.txt");
+            Log.d(TAG," Print FileTOLogcat: "+
+                    internalFileStorage.readFromFile(this));
+        } catch (Exception e)
+        {
+            Log.d(TAG,"Print FileToLogCat:  "+e);
+        }
     }
 
 }

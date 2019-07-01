@@ -66,6 +66,8 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder
         return animals.size();
     }
 
+
+
     public class ViewHolder extends RecyclerView.ViewHolder
     {
 

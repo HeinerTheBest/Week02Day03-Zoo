@@ -11,8 +11,11 @@ public class ZooDatabaseContract
     public static final String COLUMN_CATEGORY = "category";
     public static final String COLUMN_AUDIO = "audio";
     public static final String COLUMN_IMG = "img";
+
     public static final String COLUMN_DESCRIPTION = "description";
     public static final String DROP_QUERY =String.format("DROP TABLE %S", TABLE_NAME);
+
+
     public static final String SELECT_ALL_QUERY = String.format("SELECT * FROM %s", TABLE_NAME);
 
 
